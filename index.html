@@ -519,20 +519,21 @@
       color: var(--pink);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      padding: 1.2em 1em;
+      padding: 0.8em 0.8em;
       text-align: center;
       min-width: 120px;
-      min-height: 100px;
+      min-height: 80px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.3em;
+      justify-content: center;
+      gap: 0.2em;
     }
 
     .growth-icon {
-      width: 28px;
-      height: 28px;
-      margin-bottom: 0.3em;
+      width: 32px;
+      height: 32px;
+      margin-bottom: 0.2em;
       background: url('data:image/svg+xml;utf8,<svg fill="%23ff3b82" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 21V9l9-7 9 7v12H3z"/></svg>') no-repeat center/contain;
     }
 
@@ -549,13 +550,13 @@
     }
 
     .growth-number {
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: 900;
       color: var(--pink);
     }
 
     .growth-label {
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: var(--gray);
       font-weight: 500;
     }
@@ -567,14 +568,14 @@
     }
 
     .growth-text h2 {
-      font-size: 2rem;
+      font-size: 2.4rem;
       font-weight: 900;
       margin-bottom: 1em;
       color: var(--white);
     }
 
     .growth-text p {
-      font-size: 1.08rem;
+      font-size: 1.2rem;
       margin-bottom: 1.5em;
       color: var(--white);
     }
@@ -988,7 +989,7 @@
     .footer-bottom {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       margin-top: 2em;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
       padding-top: 1em;
@@ -1313,24 +1314,25 @@
         min-width: 0;
         max-width: 100%;
         border-radius: 12px;
-        padding: 0.8em 0.5em;
+        padding: 0.6em 0.4em;
+        min-height: 70px;
       }
 
       .growth-number {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
       }
 
       .growth-label {
-        font-size: 0.98rem;
+        font-size: 1rem;
       }
 
       .growth-text h2 {
-        font-size: 1.15rem;
+        font-size: 1.4rem;
         margin-bottom: 0.7em;
       }
 
       .growth-text p {
-        font-size: 1rem;
+        font-size: 1.15rem;
         margin-bottom: 1em;
       }
 
@@ -1476,10 +1478,15 @@
       .footer-bottom {
         flex-direction: column;
         gap: 0.7em;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
         font-size: 0.93rem;
         margin-top: 1em;
         padding-top: 0.7em;
+      }
+
+      .footer-copyright {
+        padding-left: 0;
       }
 
       .footer-circles {
@@ -1634,8 +1641,8 @@
         </p>
         <ul class="about-benefits">
           <li><span class="icon-check"></span> 6 types of house cleaning services available</li>
-          <li><span class="icon-check"></span> Experienced and trained staff</li>
-          <li><span class="icon-check"></span> Local office in Peabody, MA for support</li>
+          <li><span class="icon-check"></span> Highly trained professional</li>
+          <li><span class="icon-check"></span> Peabody, MA</li>
         </ul>
       </div>
     </div>
@@ -1700,8 +1707,8 @@
         </div>
       </div>
       <div class="services-cta">
-        <a href="sms:+19788717456?&body=Hello! I would like a cleaning quote." class="btn cta-main">Explore All House
-          Cleaning Services</a>
+        <a href="sms:+19788717456?&body=Hello! I would like a cleaning quote." class="btn cta-main">Set a date for your home
+          </a>
       </div>
     </div>
   </section>
@@ -1735,8 +1742,7 @@
         <p>
           With years of hands-on experience, Lara is a dedicated professional who truly understands every aspect of house cleaning. From deep cleaning kitchens and bathrooms to caring for delicate surfaces and organizing spaces, she brings expertise, attention to detail, and a passion for making every home shine. Trust Lara to handle all your cleaning needs with skill and care.
         </p>
-        <a href="sms:+19788717456?&body=Hello! I would like a cleaning quote." class="btn cta-light">Get a Free House
-          Cleaning Quote</a>
+        <a href="sms:+19788717456?&body=Hello! I would like a cleaning quote." class="btn cta-light">See available dates to book</a>
       </div>
     </div>
   </section>
@@ -1809,7 +1815,7 @@
         <p>Delivering sparkling clean homes with a smile. Contact us for a free house cleaning quote today!</p>
         <ul class="footer-contact">
           <li><span class="icon-phone"></span> +1 (978) 871-7456</li>
-          <li><span class="icon-mail"></span> info@laracleaning.com</li>
+          <li><span class="icon-mail"></span> info@laracleaning.net</li>
           <li><span class="icon-location"></span> Peabody, Massachusetts, USA</li>
         </ul>
         <div class="footer-social">
@@ -1848,10 +1854,9 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div style="padding-left: 10%;" class="footer-copyright">
+      <div class="footer-copyright">
         © 2025 Lara Cleaning. All Rights Reserved. Developed by awqyq
       </div>
-
     </div>
   </footer>
   <script>

@@ -630,10 +630,110 @@
       flex: 1 1 320px;
       min-width: 260px;
       min-height: 320px;
-      background: url(marca.jpg) no-repeat center/contain;
+      background: none !important;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+
+    .before-after-simple {
+      width: 100%;
+      max-width: 400px;
+      height: 300px;
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      background: var(--white);
+      user-select: none;
+      touch-action: none;
+      min-width: 260px;
+      min-height: 200px;
+    }
+
+    .ba-before,
+    .ba-after {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .ba-before {
+      z-index: 2;
+    }
+
+    .ba-after {
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .ba-after-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 50%;
+      overflow: hidden;
+      height: 100%;
+      z-index: 3;
+      transform: none;
+      transition: none;
+    }
+
+    .ba-after-wrapper .ba-after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+
+
+    .ba-slider {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      background: var(--pink);
+      cursor: ew-resize;
+      z-index: 4;
+    }
+
+    .ba-handle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 24px;
+      height: 24px;
+      background: var(--white);
+      border-radius: 50%;
+      border: 2px solid var(--pink);
+      cursor: ew-resize;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .ba-handle:hover {
+      background: var(--pink-light);
+      border-color: var(--pink-dark);
     }
 
     /* Testimonials */
@@ -844,7 +944,7 @@
       background-image: url('data:image/svg+xml;utf8,<svg fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 5 3.66 9.13 8.44 9.88v-6.99h-2.54v-2.89h2.54V9.41c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.89h-2.34v6.99C18.34 21.13 22 17 22 12z"/></svg>');
     }
 
-    
+
 
     .icon-instagram {
       display: none;
@@ -1202,7 +1302,7 @@
       }
 
       .growth-stats {
-        
+
         display: grid !important;
         grid-template-columns: 1fr 1fr !important;
         /* 2 colunas no mobile */
@@ -1395,6 +1495,28 @@
         padding: 0.3em 0.7em;
         border-radius: 10px 10px 10px 0;
       }
+
+      .before-after-simple {
+        max-width: 100%;
+        height: 200px;
+        border-radius: 12px;
+      }
+
+      .ba-handle {
+        width: 28px;
+        height: 28px;
+      }
+
+      @media (max-width: 600px) {
+        .before-after-simple {
+          height: 150px;
+        }
+
+        .ba-after-wrapper .ba-after {
+          object-fit: cover;
+          object-position: center;
+        }
+      }
     }
 
     @media (max-width: 480px) {
@@ -1491,7 +1613,8 @@
         </p>
         <div class="hero-ctas">
           <a href="sms:+19788717456?&body=Hello! I would like a cleaning quote." class="btn cta-main">Get a Quote</a>
-          <a href="sms:+19788717456?&body=Hello! I would like a cleaning quote." class="btn cta-secondary">Learn More</a>
+          <a href="sms:+19788717456?&body=Hello! I would like a cleaning quote." class="btn cta-secondary">Learn
+            More</a>
         </div>
       </div>
       <div style="background-image: url(foto04.jpg);background-size: cover;" class="hero-image">
@@ -1577,7 +1700,8 @@
         </div>
       </div>
       <div class="services-cta">
-        <a href="sms:+19788717456?&body=Hello! I would like a cleaning quote." class="btn cta-main">Explore All House Cleaning Services</a>
+        <a href="sms:+19788717456?&body=Hello! I would like a cleaning quote." class="btn cta-main">Explore All House
+          Cleaning Services</a>
       </div>
     </div>
   </section>
@@ -1588,7 +1712,7 @@
         <div class="growth-card">
           <span class="growth-icon"></span>
           <div class="growth-number">250+</div>
-          <div class="growth-label">Cleaning Companies</div>
+          <div class="growth-label">Cleanings</div>
         </div>
         <div class="growth-card">
           <span class="growth-icon"></span>
@@ -1597,23 +1721,22 @@
         </div>
         <div class="growth-card">
           <span class="growth-icon"></span>
-          <div class="growth-number">700+</div>
-          <div class="growth-label">Satisfied Customers</div>
+          <div class="growth-number">5+</div>
+          <div class="growth-label">Reviews</div>
         </div>
         <div class="growth-card">
           <span class="growth-icon"></span>
-          <div class="growth-number">+10</div>
-          <div class="growth-label">Professional Qualified</div>
+          <div class="growth-number">10+</div>
+          <div class="growth-label">Certificates</div>
         </div>
       </div>
       <div class="growth-text">
-        <h2>We are the Fastest Growing House Cleaning Company</h2>
+        <h2>Experienced Professional in All Aspects of House Cleaning</h2>
         <p>
-          Our commitment to excellence and customer satisfaction has made us one of the fastest growing house cleaning
-          companies in Peabody, Massachusetts. Join our community of happy clients and experience the Lara Cleaning
-          difference!
+          With years of hands-on experience, Lara is a dedicated professional who truly understands every aspect of house cleaning. From deep cleaning kitchens and bathrooms to caring for delicate surfaces and organizing spaces, she brings expertise, attention to detail, and a passion for making every home shine. Trust Lara to handle all your cleaning needs with skill and care.
         </p>
-        <a href="sms:+19788717456?&body=Hello! I would like a cleaning quote." class="btn cta-light">Get a Free House Cleaning Quote</a>
+        <a href="sms:+19788717456?&body=Hello! I would like a cleaning quote." class="btn cta-light">Get a Free House
+          Cleaning Quote</a>
       </div>
     </div>
   </section>
@@ -1631,7 +1754,17 @@
           safe.
         </p>
       </div>
-      <div class="convenience-image"></div>
+      <div class="convenience-image">
+        <div class="before-after-simple">
+          <img src="before.jpg" alt="Antes" class="ba-before">
+          <div class="ba-after-wrapper">
+            <img src="after.png" alt="Depois" class="ba-after">
+          </div>
+          <div class="ba-slider">
+            <div class="ba-handle"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <!-- What Our Customers Say -->
@@ -1718,9 +1851,80 @@
       <div style="padding-left: 10%;" class="footer-copyright">
         © 2025 Lara Cleaning. All Rights Reserved. Developed by awqyq
       </div>
-      
+
     </div>
   </footer>
+  <script>
+// Simple Before/After Effect
+document.querySelectorAll('.before-after-simple').forEach(function(container) {
+  const afterWrapper = container.querySelector('.ba-after-wrapper');
+  const slider = container.querySelector('.ba-slider');
+  let dragging = false;
+  let percent = 50;
+
+  function setSlider(p) {
+    percent = Math.max(0, Math.min(p, 100));
+    afterWrapper.style.width = percent + '%';
+    slider.style.left = percent + '%';
+  }
+
+  function getPercent(e) {
+    const rect = container.getBoundingClientRect();
+    let clientX = (e.touches && e.touches[0]) ? e.touches[0].clientX : e.clientX;
+    let offset = clientX - rect.left;
+    return (offset / rect.width) * 100;
+  }
+
+  function startDrag(e) {
+    dragging = true;
+    document.body.style.userSelect = 'none';
+    document.body.style.cursor = 'ew-resize';
+    setSlider(getPercent(e));
+    e.preventDefault();
+  }
+
+  function duringDrag(e) {
+    if (!dragging) return;
+    setSlider(getPercent(e));
+    e.preventDefault();
+  }
+
+  function stopDrag() {
+    dragging = false;
+    document.body.style.userSelect = '';
+    document.body.style.cursor = '';
+  }
+
+  // Mouse events
+  slider.addEventListener('mousedown', startDrag);
+  window.addEventListener('mousemove', duringDrag);
+  window.addEventListener('mouseup', stopDrag);
+
+  // Touch events
+  slider.addEventListener('touchstart', startDrag, {passive: false});
+  window.addEventListener('touchmove', duringDrag, {passive: false});
+  window.addEventListener('touchend', stopDrag);
+
+  // Click on container to move slider
+  container.addEventListener('mousedown', function(e) {
+    if (e.target === slider || e.target.closest('.ba-handle')) return;
+    setSlider(getPercent(e));
+  });
+
+  container.addEventListener('touchstart', function(e) {
+    if (e.target === slider || e.target.closest('.ba-handle')) return;
+    setSlider(getPercent(e));
+  }, {passive: false});
+
+  // Initialize slider position
+  setSlider(50);
+
+  // Handle window resize
+  window.addEventListener('resize', function() {
+    setSlider(percent);
+  });
+});
+  </script>
 </body>
 
 </html>
